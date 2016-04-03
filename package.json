@@ -1,0 +1,20 @@
+{
+  "name": "algolia-csv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  },
+  "bin": {
+    "algolia-upload": "bin/algolia-upload.js"
+  },
+  "author": "Alexandre Stanislawski <bobylito@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "agentkeepalive": "^2.1.0",
+    "algoliasearch": "^3.13.1",
+    "batch-stream": "^0.1.2",
+    "csv-parse": "^1.0.2",
+    "stream-transform": "^0.1.1"
+  }
+}
