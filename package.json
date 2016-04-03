@@ -1,6 +1,6 @@
 {
   "name": "algolia-csv",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   "bin": {
     "algolia-upload": "bin/algolia-upload.js"
   },
-  "author": "Alexandre Stanislawski <bobylito@gmail.com>",
+  "author": "Algolia and the poney riders <contact@algolia.com>",
   "license": "MIT",
   "dependencies": {
     "agentkeepalive": "^2.1.0",
