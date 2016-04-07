@@ -26,11 +26,19 @@ npm install -g algolia-csv
 ```
 
 You must have a file in which the first row contains the name of all the fields.
-Separator must be `,`.
 
 ```sh
-algolia-upload $ALGOLIA_APPLICATION_ID $ALGOLIA_API_KEY $INDEX_NAME $PATH_TO_CSV
+algolia-upload $APP_ID $API_KEY $indexName $file|$url [-d $delimiter] [-b $batchSizer] [--clear-index] [--parse-arrays=$column]
 ```
+
+Mandatory parameters are the aplication id, a key with write rights, the target index name and the input CSV (locally or accessible
+with http/https).
+
+Other parameters:
+ - `-d` let you set the delimiter used in your file. This should be set in quotes. Default is ','.
+ - `-b` let you set the batch size. Default is 10000.
+ - `--clear-index` forces the index to be cleared before uploading the new data.
+ - `--parse-arrays=` let you specify if a column value should be splitted with ',' before uploading the data. More than one column can be set.
 
 ### As a library
 
@@ -47,6 +55,8 @@ algoliaCsvTools.upload({
   indexName: '',
   inputFile: '',
   batchSize: 1000,
-  delimiter: ','
+  delimiter: ',',
+  clearIndex: false,
+  parseArrays: ['column']
 });
 ```
