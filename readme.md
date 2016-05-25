@@ -39,11 +39,12 @@ Other parameters:
  - `-b` let you set the batch size. Default is 10000.
  - `--clear-index` forces the index to be cleared before uploading the new data.
  - `--parse-arrays=` let you specify if a column value should be splitted with ',' before uploading the data. More than one column can be set.
+ - `--geo-colums=latCol,longCol` let you specify two columns that are to  be used for creating the special algolia attribute `_geoloc`
 
 ### As a library
 
 ```sh
-npm install --save-dev algolia-csv
+npm install --save algolia-csv
 ```
 
 ```javascript
@@ -57,6 +58,7 @@ algoliaCsvTools.upload({
   batchSize: 1000,
   delimiter: ',',
   clearIndex: false,
-  parseArrays: ['column']
+  parseArrays: ['column'],
+  geoColumns: {lat: 'latCol', 'lng': 'longColumn'}
 });
 ```
