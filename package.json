@@ -3,8 +3,7 @@
   "version": "1.2.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-  },
+  "scripts": {},
   "bin": {
     "algolia-upload": "bin/algolia-upload.js"
   },
@@ -15,6 +14,8 @@
     "algoliasearch": "^3.13.1",
     "batch-stream": "^0.1.2",
     "csv-parse": "^1.0.2",
+    "minimist": "^1.2.0",
+    "request": "^2.72.0",
     "stream-transform": "^0.1.1"
   }
 }
