@@ -16,6 +16,6 @@
     "csv-parse": "^1.0.2",
     "minimist": "^1.2.0",
     "request": "^2.72.0",
-    "stream-transform": "^0.1.1"
+    "stream-transform": "0.1.1"
   }
 }
