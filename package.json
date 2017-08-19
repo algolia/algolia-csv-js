@@ -1,9 +1,17 @@
 {
   "name": "algolia-csv",
   "version": "1.2.2",
-  "description": "",
+  "description": "Algolia CSV toolbox CLI",
+  "keywords": [
+    "algolia",
+    "csv",
+    "upload"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/algolia/algolia-csv-js.git"
+  },
   "main": "index.js",
-  "scripts": {},
   "bin": {
     "algolia-upload": "bin/algolia-upload.js"
   },
