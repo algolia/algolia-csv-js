@@ -38,7 +38,7 @@ Other parameters:
  - `-d` let you set the delimiter used in your file. This should be set in quotes. Default is ','.
  - `-b` let you set the batch size. Default is 10000.
  - `--clear-index` forces the index to be cleared before uploading the new data.
- - `--parse-arrays=` let you specify if a column value should be splitted with ',' before uploading the data. More than one column can be set.
+ - `--parse-arrays=column` let you specify if a column value should be splitted with ',' before uploading the data. More than one column can be set using this parameter multiple times.
  - `--geo-colums=latCol,longCol` let you specify two columns that are to  be used for creating the special algolia attribute `_geoloc`
 
 ### As a library
