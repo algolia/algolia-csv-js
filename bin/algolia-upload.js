@@ -12,7 +12,7 @@ function readConfig(argv) {
   var urlStartPattern = /http(?:s)*:\/\//;
 
   if( args._.length !== 4) {
-    console.error( "Usage : algolia-upload APP_ID API_KEY indexName file|url [-d ','] [-b 10000] [--clear-index] [--parse-arrays=column] [--geo-columns=lat_col,long_col]" );
+    console.error( "Usage : algolia-upload APP_ID API_KEY indexName file|url [-d ','] [-b 10000] [--clear-index] [--parse-arrays=column] [--geo-columns=lat_col,long_col] [--arrays-delimiter=',']" );
     return undefined;
   }
 
@@ -43,6 +43,7 @@ function readConfig(argv) {
     delimiter: args['d'] || ',',
     clearIndex: args['clear-index'] || false,
     parseArrays: parseArrays || false,
+    arraysDelimiter: args['arrays-delimiter'] || ',',
     geoColumns: geoColumns
   };
 }
