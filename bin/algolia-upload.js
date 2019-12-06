@@ -12,19 +12,19 @@ function readConfig(argv) {
   var urlStartPattern = /http(?:s)*:\/\//;
 
   if( args._.length !== 4) {
-    console.error( "Usage : algolia-upload APP_ID API_KEY indexName file|url [-d ','] [-b 10000] [--clear-index] [--parse-arrays=column] [--geo-columns=lat_col,long_col] [--arrays-delimiter=',']" );
+    console.error( "Usage : algolia-upload APP_ID API_KEY indexName file|url [-d ','] [-b 10000] [--clear-index] [--parse-arrays=column] [--arrays-delimiter=','] [--geo-columns=lat_col,long_col]" );
     return undefined;
   }
 
   var parseArrays;
-  if(Array.isArray(args['parse-arrays'])) parseArrays = args['parse-arrays']
+  if(Array.isArray(args['parse-arrays'])) parseArrays = args['parse-arrays'];
   else if(typeof args['parse-arrays']) parseArrays = [args['parse-arrays']];
 
   var geoColumns = null;
   if(args['geo-columns']) {
     var cols = args['geo-columns'].split(',');
-    if(cols.length != 2) {
-      console.error('--geo-columns argument must contain the name of two columns respectively for lattitude and longitude separeted with a comma');
+    if(cols.length !== 2) {
+      console.error('--geo-columns argument must contain the name of two columns respectively for latitude and longitude separated with a comma');
       return undefined;
     }
     geoColumns = {

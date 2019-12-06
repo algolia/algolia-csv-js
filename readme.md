@@ -28,7 +28,7 @@ npm install -g algolia-csv
 You must have a file in which the first row contains the name of all the fields.
 
 ```sh
-algolia-upload $APP_ID $API_KEY $indexName $file|$url [-d $delimiter] [-b $batchSizer] [--clear-index] [--parse-arrays=$column] [--arrays-delimiter=$delimiter]
+algolia-upload $APP_ID $API_KEY $indexName $file|$url [-d $delimiter] [-b $batchSizer] [--clear-index] [--parse-arrays=$column] [--arrays-delimiter=$delimiter] [--geo-columns=$latCol,$longCol]
 ```
 
 Mandatory parameters are the aplication id, a key with write rights, the target index name and the input CSV (locally or accessible
