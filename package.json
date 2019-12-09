@@ -1,6 +1,6 @@
 {
   "name": "algolia-csv",
-  "version": "1.2.2",
+  "version": "1.3.0",
   "description": "Algolia CSV toolbox CLI",
   "keywords": [
     "algolia",
