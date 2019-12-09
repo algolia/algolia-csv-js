@@ -28,7 +28,7 @@ npm install -g algolia-csv
 You must have a file in which the first row contains the name of all the fields.
 
 ```sh
-algolia-upload $APP_ID $API_KEY $indexName $file|$url [-d $delimiter] [-b $batchSizer] [--clear-index] [--parse-arrays=$column] [--arrays-delimiter=$delimiter] [--geo-columns=$latCol,$longCol]
+algolia-upload $APP_ID $API_KEY $indexName $file|$url [-d $delimiter] [-b $batchSizer] [--clear-index] [--parse-arrays=$column] [--array-delimiter=$delimiter] [--geo-columns=$latCol,$longCol]
 ```
 
 Mandatory parameters are the aplication id, a key with write rights, the target index name and the input CSV (locally or accessible
@@ -39,8 +39,8 @@ Other parameters:
  - `-b` let you set the batch size. Default is 10000.
  - `--clear-index` forces the index to be cleared before uploading the new data.
  - `--parse-arrays=column` let you specify if a column value should be split before uploading the data.
-   More than one column can be set using this parameter multiple times. Value will be split with `--arrays-delimiter`.
- - `--arrays-delimiter` let you specify the delimiter used to split the values of columns defined with `--parser-arrays`. Default is ','.
+   More than one column can be set using this parameter multiple times. Value will be split with `--array-delimiter`.
+ - `--array-delimiter` let you specify the delimiter used to split the values of columns defined with `--parse-arrays`. Default is ','.
  - `--geo-columns=latCol,longCol` let you specify two columns that are to  be used for creating the special algolia attribute `_geoloc`.
 
 ### As a library
@@ -61,7 +61,7 @@ algoliaCsvTools.upload({
   delimiter: ',',
   clearIndex: false,
   parseArrays: ['column'],
-  arraysDelimiter: '|',
+  arrayDelimiter: '|',
   geoColumns: {lat: 'latCol', 'lng': 'longColumn'}
 });
 ```
