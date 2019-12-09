@@ -21,7 +21,7 @@
     "agentkeepalive": "^2.1.0",
     "algoliasearch": "^3.13.1",
     "batch-stream": "^0.1.2",
-    "csv-parse": "^1.0.2",
+    "csv-parse": "^4.4.6",
     "minimist": "^1.2.0",
     "request": "^2.72.0",
     "stream-transform": "0.1.1"
